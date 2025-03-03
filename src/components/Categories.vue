@@ -1,5 +1,5 @@
 <template>
-  <div id="sarooh" style="padding: 10px 5px" class="col-12 col-md-4">
+  <router-link to="/products" id="sarooh" style="padding: 10px 5px" class="col-12 col-md-4">
     <div
       style="background-color: #7c444f; justify-content: end"
       class="category-box"
@@ -14,8 +14,8 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
       </div>
     </div>
-  </div>
-  <div id="shawarma" style="padding: 10px 5px" class="col-12 col-md-4">
+  </router-link>
+  <router-link to="/products" id="shawarma" style="padding: 10px 5px" class="col-12 col-md-4">
     <div
       style="background-color: #b1c29e; justify-content: start"
       class="category-box"
@@ -30,8 +30,8 @@
         <p>Lorem ipsum dolor sit amet consectetur, deleniti amet!</p>
       </div>
     </div>
-  </div>
-  <div id="burgers" style="padding: 10px 5px" class="col-12 col-md-4">
+  </router-link>
+  <router-link to="/products" id="burgers" style="padding: 10px 5px" class="col-12 col-md-4">
     <div
       style="background-color: #e16a54; justify-content: end"
       class="category-box"
@@ -56,8 +56,8 @@
         <p>Lorem ipsum dolor sit deleniti amet!</p>
       </div>
     </div>
-  </div>
-  <div id="grill" style="padding: 10px 5px" class="col-12 col-md-4">
+  </router-link>
+  <router-link to="/products" id="grill" style="padding: 10px 5px" class="col-12 col-md-4">
     <div
       style="background-color: #f39e60; justify-content: start"
       class="category-box"
@@ -77,8 +77,8 @@
         <p>Lorem ipsum dolor sit amet deleniti amet!</p>
       </div>
     </div>
-  </div>
-  <div id="salads" style="padding: 10px 5px" class="col-12 col-md-4">
+  </router-link>
+  <router-link to="/products" id="salads" style="padding: 10px 5px" class="col-12 col-md-4">
     <div
       style="background-color: #7c444f; justify-content: end"
       class="category-box"
@@ -93,8 +93,8 @@
         <p>Lorem ipsum dolor sit amet consectetur, deleniti amet!</p>
       </div>
     </div>
-  </div>
-  <div id="appetizers" style="padding: 10px 5px" class="col-12 col-md-4">
+  </router-link>
+  <router-link to="/products" id="appetizers" style="padding: 10px 5px" class="col-12 col-md-4">
     <div
       style="background-color: #b1c29e; justify-content: start"
       class="category-box"
@@ -114,8 +114,8 @@
         <p>Lorem ipsum dolor sit deleniti amet!</p>
       </div>
     </div>
-  </div>
-  <div id="pizzas" style="padding: 10px 5px" class="col-12 col-md-4">
+  </router-link>
+  <router-link to="/products" id="pizzas" style="padding: 10px 5px" class="col-12 col-md-4">
     <div
       style="background-color: #e16a54; justify-content: end"
       class="category-box"
@@ -130,8 +130,8 @@
         <p>Lorem ipsum dolor sit amet deleniti amet!</p>
       </div>
     </div>
-  </div>
-  <div id="owen" style="padding: 10px 5px" class="col-12 col-md-4">
+  </router-link>
+  <router-link to="/products" id="owen" style="padding: 10px 5px" class="col-12 col-md-4">
     <div
       style="background-color: #f39e60; justify-content: start"
       class="category-box"
@@ -156,8 +156,8 @@
         <p>Lorem ipsum dolor sit deleniti amet!</p>
       </div>
     </div>
-  </div>
-  <div id="drinks" style="padding: 10px 5px" class="col-12 col-md-4">
+  </router-link>
+  <router-link to="/products" id="drinks" style="padding: 10px 5px" class="col-12 col-md-4">
     <div
       style="background-color: #7c444f; justify-content: end"
       class="category-box"
@@ -177,7 +177,7 @@
         <p>Lorem ipsum dolor sit amet deleniti amet!</p>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -250,5 +250,8 @@ nav ul li input {
   height: 100vh;
   z-index: 1000;
   transition: all 1s ease;
+}
+a {
+  text-decoration: none;
 }
 </style>
