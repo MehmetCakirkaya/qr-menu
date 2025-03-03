@@ -3,12 +3,15 @@
     <router-link to="/"
       ><img class="rounded" src="https://placehold.co/50" alt=""
     /></router-link>
-    <h1 v-if="active">Iskender Pasha</h1>
+    <h1 v-if="active" class="restaurant-name">Iskender Pasha</h1>
     <span>
-      <span class="d-flex ">
-        <div class="middle mx-3">
+      <span class="d-flex">
+        <div class="middle">
           <!-- <span class="text">light</span> -->
-          <div @click="toggleDarkMode($event)" class="switch">
+          <div
+            @click="toggleDarkMode($event)"
+            :class="isDarkMode ? 'switch dark' : 'switch'"
+          >
             <span class="sun"></span>
             <span class="moon"></span>
             <!-- sun stuff -->
@@ -25,7 +28,12 @@
           </div>
           <!-- <span class="text">dark</span> -->
         </div>
-        <img style="max-width: 50px" src="assets/img/tr.png" alt="" />
+        <img
+          style="max-width: 40px"
+          class="rounded"
+          src="assets/img/tr.png"
+          alt=""
+        />
       </span>
     </span>
   </div>
@@ -40,9 +48,27 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      isDarkMode: false, // Başlangıçta light mode
+    };
+  },
+  mounted() {
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme) {
+      document.documentElement.setAttribute("data-theme", currentTheme);
+      this.isDarkMode = currentTheme === "dark";
+    }
+  },
   methods: {
     toggleDarkMode(event) {
+      console.log(event);
       event.currentTarget.classList.toggle("dark");
+
+      this.isDarkMode = !this.isDarkMode;
+      const newTheme = this.isDarkMode ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
     },
   },
 };
@@ -59,19 +85,18 @@ export default {
   align-items: center;
 }
 
+.restaurant-name {
+  color: var(--title-color);
+}
+
 /* Light Dark Mode Switch */
 
 .middle {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: 100vh;
-  width: 100vw;
-  transform: scale(3); */
+  margin-right: 10px;
 }
-/* * {
-  box-sizing: border-box;
-} */
 .switch {
   width: 40px;
   height: 24px;

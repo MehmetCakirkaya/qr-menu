@@ -68,7 +68,8 @@ export default {
 }
 
 .modal-content {
-  background-color: white;
+  background-color: var(--base-bg-color);
+  color: var(--title-color);
   width: 35%;
   padding: 20px;
   border-radius: 8px;
@@ -90,6 +91,14 @@ export default {
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background: rgb(225 40 40);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  color: white;
 }
 
 .modal-content img {
@@ -108,22 +117,24 @@ export default {
 }
 
 .quantity-controls {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  color: var(--title-color);
 }
 
 .quantity-controls button {
-  background-color: #007bff;
+  background-color: var(--btn);
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 5px;
   margin: 0 5px;
   cursor: pointer;
   border-radius: 4px;
+  width: 30px;
+  height: 30px;
 }
-
 .add-to-cart {
-  background-color: #28a745;
+  background-color: var(--btn);
   color: white;
   border: none;
   padding: 10px 20px;

@@ -1,0 +1,29 @@
+:root {
+  --base-bg-color: white;
+  --title-color: #2c3e50;
+  --category-bg-1: #7c444f;
+  --category-bg-2: #b1c29e;
+  --category-bg-3: #e16a54;
+  --category-bg-4: #f39e60;
+  --basket-box: #00000012;
+  --btn: #2c3e50;
+}
+
+[data-theme="dark"] {
+  --base-bg-color: #161625;
+  --title-color: white;
+  --category-bg-1: #7c444f;
+  --category-bg-2: #b1c29e;
+  --category-bg-3: #e16a54;
+  --category-bg-4: #f39e60;
+  --basket-box: #ffffff26;
+  --btn: #ffffff36;
+
+
+}
+
+body {
+  background-color: var(--base-bg-color) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+

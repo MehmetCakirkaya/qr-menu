@@ -33,7 +33,7 @@
                   <p class="card-text">
                     {{ item.description }}
                   </p>
-                  <p class="card-text">
+                  <p class="card-text2">
                     <strong>{{ item.price }}</strong>
                   </p>
                 </div>
@@ -162,6 +162,10 @@ export default {
   line-clamp: 2;
   min-height: 48px;
   max-height: 48px;
+}
+
+.card-text2 {
+  margin: 0;
 }
 
 /* Modal Stilleri */

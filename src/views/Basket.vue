@@ -11,14 +11,16 @@
           >
             <div class="basket-details">
               <img
-                src="https://placehold.co/50"
+                src="../../public/assets/img/products/pizza.jpg"
                 alt="Ürün Resmi"
                 class="product-image"
               />
-              <h2>{{ item.title }}</h2>
+              <div class="d-flex flex-wrap flex-column">
+                <h2>{{ item.title }}</h2>
+                <p>{{ item.price }} TL</p>
+              </div>
             </div>
             <div class="basket-interaction">
-              <p>{{ item.price }} TL</p>
               <div class="quantity-controls">
                 <button @click="decreaseQuantity(item)">-</button>
                 <span>{{ item.amount }}</span>
@@ -26,12 +28,12 @@
               </div>
             </div>
           </div>
-          <button>Garson Çağır</button>
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="col-12 text-start basket-result">
           <p>Toplam Ücret: 297.90</p>
+          <button class="btn btn-lg p-2">Garson Çağır</button>
         </div>
       </div>
     </div>
@@ -48,7 +50,7 @@ export default {
   },
   data() {
     return {
-      activeNme: true,
+      activeNme: false,
 
       products: [
         {
@@ -104,19 +106,26 @@ export default {
 .basket-box {
   display: flex;
   align-items: center;
-  border: 1px solid #ddd;
   padding: 10px;
   margin-bottom: 10px;
+  background-color: var(--basket-box);
 }
 
 .basket-result {
   padding: 20px;
   border-left: 2px solid gray;
+  color: var(--title-color);
+}
+
+.basket-result button {
+  background-color: var(--btn);
+  border-radius: 12px;
+  color: white;
 }
 
 .product-image {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   margin-right: 20px;
 }
 
@@ -127,8 +136,10 @@ export default {
   align-items: center;
 }
 
-.basket-details h2 {
+.basket-details h2,
+.basket-details p {
   margin: 0;
+  color: var(--title-color);
 }
 
 .basket-interaction {
@@ -138,16 +149,19 @@ export default {
 .quantity-controls {
   display: inline-flex;
   align-items: center;
+  color: var(--title-color);
 }
 
 .quantity-controls button {
-  background-color: #007bff;
+  background-color: var(--btn);
   color: white;
   border: none;
   padding: 5px;
   margin: 0 5px;
   cursor: pointer;
   border-radius: 4px;
+  width: 30px;
+  height: 30px;
 }
 
 .quantity-controls span {
